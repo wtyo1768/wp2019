@@ -202,30 +202,36 @@ body {
 .dfood {
     height: 23.56%;
     width: 23.56%;
+    border-radius:3vmin;
+    cursor: pointer;
 }
 
 #dra-f1 {
     background-image: url('./assets/pic-1.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #dra-f2 {
     background-image: url('./assets/pic-2.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #dra-f3 {
     background-image: url('./assets/pic-3.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #dra-f4 {
     background-image: url('./assets/pic-4.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #bottom-bar {
@@ -267,7 +273,6 @@ body {
 
 #Meal-1 {
     width: 100%;
-    /* height: 80%; */
     background-image: url('./assets/food-1.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -275,7 +280,6 @@ body {
 
 #Meal-2 {
     width: 100%;
-    /* height: 80%; */
     background-image: url('./assets/food-2.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -283,7 +287,6 @@ body {
 
 #Meal-3 {
     width: 100%;
-    /* height: 80%; */
     background-image: url('./assets/food-3.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -291,7 +294,6 @@ body {
 
 #Meal-4 {
     width: 100%;
-    /* height: 80%; */
     background-image: url('./assets/food-4.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -299,22 +301,25 @@ body {
 
 #Meal-5 {
     width: 100%;
-    /* height: 80%; */
     background-image: url('./assets/food-5.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
-
+#Meal-1:hover,#Meal-2:hover,#Meal-3:hover,#Meal-4:hover,#Meal-5:hover{
+    opacity:0.5;
+    transition: .25s linear;
+    cursor: pointer;
+}
 .order-btn {
     height: 8%;
     width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.075em solid black;
+    border: 0.25vmin solid black;
     border-radius: 1em;
     position: relative;
-    font-size: 1em;
+    font-size: 2.1vmin;
     opacity: 0;
 }
 .Meals-container>p{
@@ -334,12 +339,12 @@ body {
     content: "";
     position: absolute;
     width: 70%;
-    height: 0.1em;
-    bottom: 0.5em;
+    height: 0.25vmin;
+    bottom: 1vmin;
     left: 15%;
     background: rgb(5, 0, 0);
     visibility: hidden;
-    border-radius: 5px;
+    border-radius: 0.01vmin;
     transform: scaleX(0);
     transition: .25s linear;
 }
@@ -357,4 +362,15 @@ body {
     position: absolute;
     background-color: #fefbe8;
     bottom:-35vh
+}
+#back-btn{
+    background-image: url('./assets/back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    width:20%;
+    height:20%;
+    background-size: auto;
 }
