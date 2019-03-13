@@ -3,7 +3,6 @@
     font-family: 'ERASBD';
     src: url(assets/ERASBD.TTF) format('truetype');
 }
-
 body {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -59,6 +58,7 @@ body {
 }
 
 #my-food {
+    font-size:0.8rem;
     width: 5vw;
     height: 90%;
     display: flex;
@@ -305,8 +305,39 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+.Meal-content{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:80%;
+    height:80%;
+    border-radius:2rem;
+    background-color: rgb(243, 232, 207);
+    z-index:1;
+    opacity: 0;
+}
+
+#Meal-1,#Meal-2,#Meal-3,#Meal-4,#Meal-5{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.Meal-content p{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.hiding-p{
+    display:none;
+}
 #Meal-1:hover,#Meal-2:hover,#Meal-3:hover,#Meal-4:hover,#Meal-5:hover{
     opacity:0.5;
+    transition: .25s linear;
+    cursor: pointer;
+}
+#Meal-1:hover .Meal-content,#Meal-2:hover .Meal-content,
+#Meal-3:hover .Meal-content, #Meal-4:hover .Meal-content,
+#Meal-5:hover .Meal-content{
+    opacity:0.8;
     transition: .25s linear;
     cursor: pointer;
 }

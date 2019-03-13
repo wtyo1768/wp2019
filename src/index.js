@@ -1,5 +1,10 @@
 import * as $ from 'jquery';
 
+window.onload = ()=>{
+    $(".Meal-content p").toggleClass('hiding-p');
+    go_to_food_page();
+}
+
 var drag_buffer;
 const drag_handler = function (event) {
     drag_buffer = event.target.id;
@@ -46,6 +51,7 @@ const go_to_food_page = () => {
                 }, i * 200)
             }
             setTimeout(() => {
+                $(".Meal-content p").toggleClass('hiding-p');
                 $(".Meals-container>p").animate({ 'opacity': '1' }, 500)
             }, 2000)
         })
@@ -72,6 +78,7 @@ const go_to_home_page = () => {
                     $("#center2-container").css({ 'visibility': 'hidden' });
                     $("#center-container").fadeIn(1500);
                     $("#bottom-bar").animate({ 'left': '0vw' }, 1500);
+                    $(".Meal-content p").toggleClass('hiding-p');
                 });
             })
 
