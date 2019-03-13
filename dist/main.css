@@ -310,9 +310,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width:80%;
-    height:80%;
-    border-radius:2rem;
+    width: 65%;
+    height:70%;
+    border-radius:0.6rem;
     background-color: rgb(243, 232, 207);
     z-index:1;
     opacity: 0;
