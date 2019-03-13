@@ -72,8 +72,8 @@ body {
 
 #my-food:hover {
     background-color: rgb(255, 217, 190);
-    font-style: italic;
-    color: white;
+    /* font-style: italic; */
+    /* color: white; */
     transition: 0.3s;
     border-color: rgb(216, 114, 39);
 }
@@ -145,7 +145,7 @@ body {
     transition: 0.4s;
 }
 
-#big-spuare-container {
+#big-square-container {
     width: 21em;
     height: 21em;
     display: flex;
@@ -153,6 +153,9 @@ body {
     flex-wrap: wrap;
 }
 
+.btn-to-FoodPage{
+    cursor: pointer;
+}
 #four-food {
     height: 95%;
     width: 34%;
@@ -202,13 +205,13 @@ body {
 .dfood {
     height: 23.56%;
     width: 23.56%;
-    border-radius:3vmin;
-    cursor: pointer;
+    border-radius:2.5vmin;
+    /* cursor: pointer; */
 }
 
 #dra-f1 {
     background-image: url('./assets/pic-1.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -337,6 +340,8 @@ body {
 #Meal-1:hover .Meal-content,#Meal-2:hover .Meal-content,
 #Meal-3:hover .Meal-content, #Meal-4:hover .Meal-content,
 #Meal-5:hover .Meal-content{
+    border : 0.15rem solid black;
+    overflow: hidden;
     opacity:0.8;
     transition: .25s linear;
     cursor: pointer;

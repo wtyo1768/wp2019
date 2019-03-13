@@ -1,41 +1,62 @@
 import * as $ from 'jquery';
+import 'jquery-ui-dist/jquery-ui';
+import { DH_CHECK_P_NOT_SAFE_PRIME } from 'constants';
 
-window.onload = ()=>{
+window.onload = () => {
     $(".Meal-content p").toggleClass('hiding-p');
-    go_to_food_page();
+    $(".dfood").draggable({
+        revert: true, opacity: 0.7, helper: "original",
+        start: function (event) {
+            drag_buffer = event.target.id;
+            console.log(drag_buffer)
+        },/*
+        drag: function () {
+        },
+        stop: function () {
+            if (event.target.id.split('-')[1] == drag_buffer.split('f')[1]) {
+                $("#" + event.target.id).toggleClass('dragfin');
+                $("#" + drag_buffer).hide();
+                fin_num++;
+                console.log(fin_num)
+                if (fin_num == 4)
+                    go_to_food_page();
+            }
+        }*/
+    });
+    //  go_to_food_page();
 }
-
 var drag_buffer;
-const drag_handler = function (event) {
-    drag_buffer = event.target.id;
-    event.preventDefault();
-}
 var fin_num = 0;
-const drop_handler = function (event) {
-    event.preventDefault();
 
-    if (event.target.id.split('-')[1] == drag_buffer.split('f')[1]) {
-        $("#" + event.target.id).toggleClass('dragfin');
-        $("#" + drag_buffer).hide();
-        fin_num++;
-        console.log(fin_num)
-        if (fin_num == 4)
-            go_to_food_page();
+$(".food").droppable({
+    drop: function (event) {
+        if (event.target.id && event.target.id.split('-')[1] == drag_buffer.split('f')[1]) {
+            $("#" + event.target.id).toggleClass('dragfin');
+            $("#" + drag_buffer).hide();
+            fin_num++;
+            console.log(fin_num)
+            if (fin_num == 4) {
+                $("#big-square-container").addClass('btn-to-FoodPage');
+                go_to_food_page();
+                document.getElementById('big-square-container').onclick = (event) => {
+                    event.stopPropagation();
+                    go_to_food_page();
+                }
+            }
+        }
     }
-}
-const dragover_handler = function (event) {
-    event.preventDefault();
-}
+});
+$("#nav-logo").click(() => {
+    go_to_home_page();
+})
 
-for (let i = 1; i <= 4; i++) {
-    document.getElementById('dra-f' + i).ondrag = drag_handler;
-    document.getElementById('food-' + i).ondrop = drop_handler;
-    document.getElementById('food-' + i).ondragover = dragover_handler;
-}
 var page_position;
+
 const go_to_food_page = () => {
-    page_position = 1;
-    $("#bottom-bar").animate({ 'left': '-25vw' }, 1500);
+    if(page_position)
+        return;
+    console.log('food')
+    $("#bottom-bar").animate({ 'left': '-=25vw' }, 1500);
     $("#bg").animate({
         'top': '-100vh',
         'left': '25vw'
@@ -56,13 +77,13 @@ const go_to_food_page = () => {
             }, 2000)
         })
     })
+    page_position = 1;
 }
-$("#nav-logo").click(() => {
-    go_to_home_page();
-})
+
 const go_to_home_page = () => {
     if (page_position) {
-        $("#bottom-color").animate({ 'bottom': '-35vh' }, 1000, () => {
+        console.log('home')
+        $("#bottom-color").animate({ 'bottom': '-35vh' }, 800, () => {
             for (let i = 1; i <= 5; i++) {
                 setTimeout(() => {
                     $("#Meal-" + i).animate({ 'height': '0' }, 1000)
@@ -76,14 +97,12 @@ const go_to_home_page = () => {
                 }, 1000, function () {
                     $("#center2-container").animate({ 'bottom': '-100vh' })
                     $("#center2-container").css({ 'visibility': 'hidden' });
-                    $("#center-container").fadeIn(1500);
-                    $("#bottom-bar").animate({ 'left': '0vw' }, 1500);
+                    $("#center-container").fadeIn(1100);
+                    $("#bottom-bar").animate({ 'left': '0vw' }, 1100);
                     $(".Meal-content p").toggleClass('hiding-p');
                 });
             })
-
         });
-
     }
     page_position = 0;
 }
