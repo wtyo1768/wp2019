@@ -3,10 +3,15 @@
     font-family: 'ERASBD';
     src: url(assets/ERASBD.TTF) format('truetype');
 }
+
+* {
+    -webkit-user-select: none;
+}
+
 body {
     overflow-x: hidden;
     overflow-y: hidden;
-    display: flex;
+    display: grid;
     width: 100vw;
     height: 100vh;
     margin: 0px;
@@ -35,11 +40,21 @@ body {
     cursor: pointer;
 }
 
+#logo-container:active {
+    opacity: 0.5;
+    transition: .1s linear;
+    transform: scale(1.1);
+}
+
+#logo-container:hover {
+    cursor: pointer;
+}
+
 #logo-word {
     display: flex;
     justify-content: center;
     color: rgb(216, 114, 39);
-    font-size:0.9em;
+    font-size: 1vw;
     line-height: 0px;
     font-family: 'Noto Sans TC', sans-serif;
 }
@@ -58,13 +73,13 @@ body {
 }
 
 #my-food {
-    font-size:0.8rem;
+    font-size: 1vw;
     width: 5vw;
     height: 90%;
     display: flex;
     justify-content: center;
     border: 1.4px solid black;
-    border-radius: 15px;
+    border-radius: 1.1vmin;
     font-family: 'Noto Sans TC', sans-serif;
     align-items: center;
     cursor: pointer;
@@ -110,22 +125,27 @@ body {
 
 #center-box {
     width: 100vw;
-    height: 50vh;
+    height: 80vh;
     display: flex;
+    align-items: center;
+    justify-content: space-around
 }
 
 #left-container {
-    width: 56%;
-    height: 100%;
+    width: 36%;
+    height: 60%;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 20vw;
+    top: 25vh;
 }
 
 #center-word {
     font-family: ERASBD;
     color: #3c2c6a;
-    font-size: 75px;
-    line-height: 90px;
+    font-size: 4vw;
+    line-height: 5vw;
 }
 
 #change-btn {
@@ -145,28 +165,73 @@ body {
     transition: 0.4s;
 }
 
-#big-square-container {
-    width: 21em;
-    height: 21em;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.btn-to-FoodPage{
+.btn-to-FoodPage {
+    background-image: url('assets/food-circle.png');
+    background-size: contain;
+    background-position: center;
+    z-index: 5;
     cursor: pointer;
 }
+
+.btn-to-FoodPage:hover {
+    opacity: 0.8;
+}
+
+.btn-to-FoodPage:active {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
 #four-food {
-    height: 95%;
-    width: 34%;
+    height: 28vw;
+    width: 22vw;
+    min-width: 420px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+    position: absolute;
+    top: 25vh;
+    left: 56vw;
+}
+
+#dra-food-container {
+    width: 22vw;
+    height: 5.5vw;
+    display: flex;
+    justify-content: space-around
+}
+
+#big-square-container {
+    /* max-height: calc(21em - 56vw); */
+    width: 22vw;
+    min-height: 22vw;
+    height: 22vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .food {
-    width: 47%;
-    height: 47%;
+    width: 10.5vw;
+    height: 10.5vw;
+    overflow: hidden;
+}
+
+#food-circle {
+    transform: scale(0);
+    transition: .8s linear;
+}
+
+.fin-food-circle {
+    position: absolute;
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    background-image: url('./assets/food-circle.png');
+    background-position: center;
+    background-size: contain;
+    transform: scale(1) !important;
 }
 
 #food-1 {
@@ -203,10 +268,9 @@ body {
 }
 
 .dfood {
-    height: 23.56%;
-    width: 23.56%;
-    border-radius:2.5vmin;
-    /* cursor: pointer; */
+    height: 5vw;
+    width: 5vw;
+    border-radius: 2.5vmin;
 }
 
 #dra-f1 {
@@ -255,7 +319,7 @@ body {
     align-items: center;
     visibility: hidden;
     position: absolute;
-    bottom:-100vh;
+    bottom: -100vh;
 }
 
 #box-two {
@@ -308,44 +372,48 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-.Meal-content{
-    display:flex;
+
+.Meal-content {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 65%;
-    height:70%;
-    border-radius:0.6rem;
+    height: 70%;
+    border-radius: 0.6rem;
     background-color: rgb(243, 232, 207);
-    z-index:1;
+    z-index: 1;
     opacity: 0;
 }
 
-#Meal-1,#Meal-2,#Meal-3,#Meal-4,#Meal-5{
-    display:flex;
+#Meal-1, #Meal-2, #Meal-3, #Meal-4, #Meal-5 {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.Meal-content p{
+
+.Meal-content p {
     font-family: 'Noto Sans TC', sans-serif;
 }
-.hiding-p{
-    display:none;
+
+.hiding-p {
+    display: none;
 }
-#Meal-1:hover,#Meal-2:hover,#Meal-3:hover,#Meal-4:hover,#Meal-5:hover{
-    opacity:0.5;
+
+#Meal-1:hover, #Meal-2:hover, #Meal-3:hover, #Meal-4:hover, #Meal-5:hover {
+    opacity: 0.5;
     transition: .25s linear;
     cursor: pointer;
 }
-#Meal-1:hover .Meal-content,#Meal-2:hover .Meal-content,
-#Meal-3:hover .Meal-content, #Meal-4:hover .Meal-content,
-#Meal-5:hover .Meal-content{
-    border : 0.15rem solid black;
+
+#Meal-1:hover .Meal-content, #Meal-2:hover .Meal-content, #Meal-3:hover .Meal-content, #Meal-4:hover .Meal-content, #Meal-5:hover .Meal-content {
+    border: 0.15rem solid black;
     overflow: hidden;
-    opacity:0.8;
+    opacity: 0.8;
     transition: .25s linear;
     cursor: pointer;
 }
+
 .order-btn {
     height: 8%;
     width: 65%;
@@ -358,9 +426,11 @@ body {
     font-size: 2.1vmin;
     opacity: 0;
 }
-.Meals-container>p{
+
+.Meals-container>p {
     opacity: 0;
 }
+
 .order-btn:hover {
     cursor: pointer;
     background-color: #f5d1a3;
@@ -375,7 +445,7 @@ body {
     content: "";
     position: absolute;
     width: 70%;
-    height: 0.25vmin;
+    height: 0.2vmin;
     bottom: 1vmin;
     left: 15%;
     background: rgb(5, 0, 0);
@@ -397,16 +467,41 @@ body {
     height: 32.5vh;
     position: absolute;
     background-color: #fefbe8;
-    bottom:-35vh
+    bottom: -32.5vh
 }
-#back-btn{
+
+#back-btn {
     background-image: url('./assets/back.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
-    right:0px;
-    bottom:0px;
-    width:20%;
-    height:20%;
+    right: 0px;
+    bottom: 0px;
+    width: 20%;
+    height: 20%;
     background-size: auto;
+}
+
+@media screen and (max-width: 1238px) {
+    #left-container, #four-food {
+        top: 30vh;
+    }
+    #box-two {
+        width: 100%;
+        position: absolute;
+        top:20vh;
+    }
+}
+
+@media screen and (max-width: 1087px) {
+    #Meal-1, #Meal-2, #Meal-3, #Meal-4, #Meal-5 {
+       height:70%;
+    }
+    #bottom-color {
+        height:40vh;
+        bottom:-40vh;
+    }
+    .Meal-content{
+        font-size:1.8vw;
+    }
 }
