@@ -272,6 +272,12 @@ body {
     width: 5vw;
     border-radius: 2.5vmin;
 }
+.dfood:hover{
+    cursor: grab;
+}
+.dfood:active{
+    cursor: grabbing;
+}
 
 #dra-f1 {
     background-image: url('./assets/pic-1.png');
