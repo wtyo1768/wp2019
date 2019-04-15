@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@font-face {
+    font-family: 'ERASBD';
+    src: url(assets/ERASBD.TTF) format('truetype');
+}
+
+body {
+    background: linear-gradient(rgb(227, 228, 179), rgb(207, 229, 194));
+    background: -webkit-linear-gradient(top bottom, rgb(227, 228, 179), rgb(207, 229, 194));
+    overflow-x: hidden;
+    margin:0;
+}
+
+#page2-word-box, #page3-word-box {
+    text-align: justify;
+    font-family: 'ERASBD';
+    font-size: 9px;
+    margin: auto;
+    line-height: 32px;
+    width: 65vw;
+    /* height:80vh; */
+}
+
+#cellphone-box {
+    margin: auto;
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    position: relative;
+    /* background-color: bisque; */
+}
+
+#cellphone-left, #cellphone-right {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#cellphone-left {
+    z-index: 2;
+    left: -15%;
+    background-image: url('./assets/cp-2.svg');
+}
+
+#cellphone-right {
+    left: 35%;
+    top: 10%;
+    background-image: url('./assets/cp-1.svg');
+}
+
+#city-image {
+    width: 100%;
+    height: 35vh;
+    background-image: url('./assets/city-image.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (min-width: 1024px){
+    #page_2{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #page2-word-box{
+        width:50%;
+        
+    }
+    #top-word,#bottom-word{
+        margin:auto;
+        width:85%;
+        height:60%;
+    }
+}
+@media screen and (max-width: 1238px) {}
+
+@media screen and (max-width: 1087px) {
+  
+}

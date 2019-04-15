@@ -1,146 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
          maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./main.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./page_2-3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 
-<body>
-    <div id='logo-container'>
-        <div id="nav-logo">
-        </div>
-        <div id="logo-word">
-            <p>HOME</p>
-        </div>
-    </div>
-    <div id="nav-right">
-        <div id="question-mark">
-        </div>
-        <div id="my-food">
-            <p>My Food</p>
-        </div>
-    </div>
-    <div id="bg">
-    </div>
-    <div id="center-container">
-        <div id="center-box">
-            <div id="left-container">
-                <span id="center-word">
-                    <div style="display:inline">GOOD,</div>
-                    <span style="display:inline;color:rgb(240, 128, 0)">FOOD,</span>
-                    <div>FOR,FOUR</div>
-                    <div>EVERYDAY</div>
-                </span>
-                <div id="change-btn">
-                </div>
+<body onload="load()">
+    <header>
+        <nav>
+            <ul id='menu'>
+                <li><a href="#">立即體驗</a></li>
+                <li><a href="#">簡介</a></li>
+                <li><a href="#">遊戲特色</a></li>
+                <li><a href="#">關於我們</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- This is page 1-->
+    <section id='home'>
+        <div id='logo-icon' class="wow fadeInDownBig"></div>
+        <h1 id='slogan' class="wow fadeInUp">一步一步創造你的城市</h1>
+        <p id='hint' class="wow fadeInUp">立即體驗 &#8594;</p>
+        <div id='garden' class="wow fadeInUp"></div>
+        <div id='hospital' class="wow fadeInUp"></div>
+        <div id='farm' class="wow fadeInUp""></div>
+			<div id='court' class=" wow fadeInUp"></div>
+        <div id='park' class="wow fadeInUp"></div>
+        <div id='building' class="wow fadeInUp"></div>
+    </section>
+    <!-- This is page 2-->
+    <div id="page_2">
+        <div id="page2-word-box">
+            <div id="top-word">
+                <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp隨著社會的變遷，現今國人身體活動量普遍不足，逾六成民眾沒有規律運動的習慣，基於此現象，我們開發了《City
+                    Chaser》，希望透過遊戲的吸引力，鼓勵人們多出外走動，進而提升身體活動量。</h1>
             </div>
-            <div id="four-food">
-                <div id="big-square-container">
-                    <div class="food" id="food-1" data-role="drag-drop-container">
-                    </div>
-                    <div class="food" id="food-2" data-role="drag-drop-container">
-                    </div>
-                    <div class="food" id="food-3" data-role="drag-drop-container">
-                    </div>
-                    <div class="food" id="food-4" data-role="drag-drop-container">
-                    </div>
-                    <div id="food-circle"></div>
-                </div>
-                <div id="dra-food-container">
-                    <div class="dfood" id="dra-f1">
-                    </div>
-                    <div class="dfood" id="dra-f2">
-                    </div>
-                    <div class="dfood" id="dra-f3">
-                    </div>
-                    <div class="dfood" id="dra-f4">
-                    </div>
-                </div>
+            <div id="bottom-word">
+                <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在《City
+                    Chaser》中，玩家可在真實世界探索資源，花費資源建造房屋、公園、地標，一步步擴大城市規模，快來打造屬於你的完美城市吧!</h1>
             </div>
         </div>
-        <div id="bottom-bar">
+        <div id="cellphone-box">
+            <div id="cellphone-left"></div>
+            <div id="cellphone-right"></div>
         </div>
-    </div>
-    <div id="center2-container">
-        <div id="box-two">
-            <div class="Meals-container">
-                <div id="Meal-1">
-                    <div class="Meal-content">
-                        <p>Food</p>
-                        <p>Total fat 8g</p>
-                        <p>Protein 3g</p>
-                        <p>Sodium 160mg</p>
-                    </div>
-                </div>
-                <p>$2.55</p>
-                <div class="order-btn">
-                    <p>ADD TO CART</p>
-                </div>
-            </div>
-            <div class="Meals-container">
-                <div id="Meal-2">
-                    <div class="Meal-content">
-                        <p>Food</p>
-                        <p>Total fat 8g</p>
-                        <p>Protein 3g</p>
-                        <p>Sodium 160mg</p>
-                    </div>
-                </div>
-                <p>$3.32</p>
-                <div class="order-btn">
-                    <p>ADD TO CART</p>
-                </div>
-            </div>
-            <div class="Meals-container">
-                <div id="Meal-3">
-                    <div class="Meal-content">
-                        <p>Food</p>
-                        <p>Total fat 8g</p>
-                        <p>Protein 3g</p>
-                        <p>Sodium 160mg</p>
-                    </div>
-                </div>
-                <p>$1.56</p>
-                <div class="order-btn">
-                    <p>ADD TO CART</p>
-                </div>
-            </div>
-            <div class="Meals-container">
-                <div id="Meal-4">
-                    <div class="Meal-content">
-                        <p>Food</p>
-                        <p>Total fat 8g</p>
-                        <p>Protein 3g</p>
-                        <p>Sodium 160mg</p>
-                    </div>
-                </div>
-                <p>$1.22</p>
-                <div class="order-btn">
-                    <p>ADD TO CART</p>
-                </div>
-            </div>
-            <div class="Meals-container">
-                <div id="Meal-5">
-                    <div class="Meal-content">
-                        <p>Food</p>
-                        <p>Total fat 8g</p>
-                        <p>Protein 3g</p>
-                        <p>Sodium 160mg</p>
-                    </div>
-                </div>
-                <p>$3.76</p>
-                <div class="order-btn">
-                    <p>ADD TO CART</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="bottom-color">
-        <div id='back-btn'></div>
     </div>
 
+    <!-- This is page 3-->
+    <div id="page-3">
+        <div id="page3-word-box">
+            <h1>《City Chaser》遊戲中，提供了許多遊戲機制，如:搜集資源、建造建築、成就系統等。利用這些豐富的遊戲機制，讓玩家達到更好的遊戲體驗。</h1>
+        </div>
+        <div id="city-image">
+
+        </div>
+    </div>
+    <!-- This is page 4 5-->
+    <section id='play-now'>
+        <div id='play-description'>
+            <h1>一步一步創造你的城市</h1>
+            <h2>立即體驗 →</h2>
+        </div>
+        <div id='city'>
+            <img id='city-21' class="wow" fadeIn" src="image/city-chaser素材-21.svg">
+            <div id='city-desciption'>
+                <img id='city-20' class="wow fadeInUp" src="image/city-chaser素材-20.svg">
+                <img id='city-18' class="wow fadeInUp" src="image/city-chaser素材-18.svg">
+                <img id='city-19' class="wow fadeInUp" src="image/city-chaser素材-19.svg">
+            </div>
+        </div>
+    </section>
+    <section id='about-us'>
+        <div class="Banner">
+            <h3>關於我們</h3>
+        </div>
+        <div>
+            <div class="LeftContent">
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo4.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p4.jpg" class="LeftSide" onclick="myFunction(this);" id="photo4"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo2.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p2.jpg" class="RightSide" onclick="myFunction(this);" id="photo2"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="CenterContent">
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo5.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p5.jpg" class="LeftSide" onclick="myFunction(this);" id="photo5"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo1.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p1.jpg" class="RightSide" onclick="myFunction(this);" id="photo1"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            <div class="RightContent">
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo3.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p3.jpg" class="LeftSide" onclick="myFunction(this);" id="photo3"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+                <div class="hvrbox">
+                    <div class="wow fadeInUp">
+                        <picture>
+                            <source srcset="image/photo6.jpg" media="(min-width: 720px)" class="hvrbox-layer_bottom">
+                            <img src="image/photo_p6.jpg" class="RightSide" onclick="myFunction(this);" id="photo6"
+                                alt="<h1>王小明</h1><br>認真努力<br>長得漂亮">
+                            <div class="hvrbox-layer_top">
+                                <div class="hvrbox-text">
+                                    <h3>王小名</h3>
+                                    帥氣可愛<br>
+                                    擅長耍廢睡覺<br>
+                                </div>
+                            </div>
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="showPhoto">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn" id="deletephoto">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+        </div>
+    </section>
+    </main>
+    <footer class="Footer">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;city chaser 2019.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script src="index.js"></script>
     <script src="./main.js"></script>
 </body>
 
