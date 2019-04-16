@@ -3,14 +3,17 @@
     font-family: 'ERASBD';
     src: url(assets/ERASBD.TTF) format('truetype');
 }
-*{
-    font-weight: 900;
+
+* {
+    font-family: 'ERASBD';
+    font-weight: 1000;
 }
+
 body {
     background: linear-gradient(rgb(227, 228, 179), rgb(207, 229, 194));
     background: -webkit-linear-gradient(top bottom, rgb(227, 228, 179), rgb(207, 229, 194));
     overflow-x: hidden;
-    margin:0;
+    margin: 0;
 }
 
 #page2-word-box, #page3-word-box {
@@ -36,7 +39,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-position-x : 25%;
+    background-position-x: 25%;
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -52,10 +55,12 @@ body {
     top: 10%;
     background-image: url('./assets/cp-1.svg');
 }
-#page-3{
-    margin-top:75px;
+
+#page-3 {
+    margin-top: 75px;
     /* margin-bottom:25px; */
 }
+
 #city-image {
     width: 100%;
     height: 35vh;
@@ -64,98 +69,122 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-@media screen and (min-width: 1024px){
-    #page_2{
-        display:flex;
+
+@media screen and (min-width: 1024px) {
+    #page_2 {
+        display: flex;
         justify-content: center;
         align-items: center;
-        margin:75px;
+        margin: 75px;
     }
-    #page2-word-box{
-        width:50%;
-        height:100%;
+    #page2-word-box {
+        width: 50%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex:1
+        flex: 1
     }
-    #top-word,#bottom-word{
-        margin:auto;
-        width:85%;
-        height:60%;
+    #top-word, #bottom-word {
+        margin: auto;
+        margin-bottom:50px;
+        width: 85%;
+        height: 60%;
     }
-    #cellphone-box{
+    #cellphone-box {
         width: 50vw;
-        height:90vh;
+        height: 90vh;
     }
-    #cellphone-right{
-        left:0%;
+    #cellphone-right {
+        left: 0%;
     }
-    #cellphone-left{
-        left:30%;
-
+    #cellphone-left {
+        left: 30%;
     }
-    #page-3{
-        margin-top:150px;
+    #page-3 {
+        margin-top: 150px;
         position: relative;
-        height:100vh;
+        height: 100vh;
     }
-    #page3-word-box{
+    #page3-word-box {
         position: absolute;
-        top:7%;
-        left:50vw;
-        width:35vw;
+        top: 7%;
+        left: 50vw;
+        width: 35vw;
     }
-    #city-image{
-        position:absolute;
-        bottom:0px;
-        left:-8%;
-        height:85vh;
+    #city-image {
+        position: absolute;
+        bottom: 0px;
+        left: -8%;
+        height: 85vh;
         background-size: contain;
         background-position: left;
     }
-    #city-img-box{
+    #city-img-box {
         position: relative;
-        width:100%;
+        width: 100%;
         height: 75%;
         background-color: black;
     }
-    .scity{
+    .scity {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    #city1,#city2,#city3{
-        /* position: absolute; */
-    }
-    #city1{
+    #city1 {
         background-image: url('assets/city-chaser素材-16.svg');
         position: absolute;
-        bottom:-250px;
-        left:-100px;
-        width:250px;
-        height:250px;
+        bottom: -350px;
+        left: -100px;
+        width: 350px;
+        height: 350px;
     }
-    #city2{
+    #city2 {
         position: absolute;
         background-image: url('assets/city-chaser素材-13.svg');
-        top:100px;
-        right:90px;
-        width:100px;
-        height:100px;
+        top: 50px;
+        right: 220px;
+        width: 125px;
+        height: 125px;
     }
-    #city3{
+    #city3 {
         position: absolute;
         background-image: url('assets/city-chaser素材-17.svg');
-        right:175px;
-        top:50px;
-        width:100px;
-        height:100px;
+        right: 330px;
+        top: -20px;
+        width: 125px;
+        height: 125px;
     }
 }
-@media screen and (max-width: 1238px) {}
 
-@media screen and (max-width: 1087px) {
-  
-}
+@media screen and (max-width: 1200px) {
+    #city2 {
+        top: 100px;
+        right: -80px;
+        width: 100px;
+        height: 100px;
+    }
+    #city3 {
+        right: 0px;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+    }
+} 
+
+@media screen and (max-width: 1680px) {
+    #city2 {
+        top: 80px;
+        right: 110px;
+        width: 125px;
+        height: 125px;
+    }
+    #city3 {
+        right: 210px;
+        top: 10px;
+        width: 125px;
+        height: 125px;
+    }
+} 
+@media screen and (max-width: 1087px) {}
