@@ -75,11 +75,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 75px;
+        width:100vw;
+        height:100vh;
     }
     #page2-word-box {
         width: 50%;
-        height: 100%;
+        height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,7 +89,7 @@ body {
     }
     #top-word, #bottom-word {
         margin: auto;
-        margin-bottom:50px;
+        /* margin-bottom:50px; */
         width: 85%;
         height: 60%;
     }
@@ -124,8 +125,8 @@ body {
     #city-img-box {
         position: relative;
         width: 100%;
-        height: 75%;
-        background-color: black;
+        height: 50vh;
+        /* background-color: black; */
     }
     .scity {
         background-position: center;
@@ -135,8 +136,8 @@ body {
     #city1 {
         background-image: url('assets/city-chaser素材-16.svg');
         position: absolute;
-        bottom: -350px;
-        left: -100px;
+        bottom: -150px;
+        left: -50px;
         width: 350px;
         height: 350px;
     }
@@ -176,12 +177,12 @@ body {
 @media screen and (max-width: 1680px) {
     #city2 {
         top: 80px;
-        right: 110px;
+        right: 5px;
         width: 125px;
         height: 125px;
     }
     #city3 {
-        right: 210px;
+        right: 125px;
         top: 10px;
         width: 125px;
         height: 125px;
